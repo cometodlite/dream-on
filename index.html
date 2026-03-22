@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DREAM ON — Web RPG Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>DREAM ON</h1>
+        <p class="subtitle">꿈과 악몽 사이를 걷는 웹 RPG 프로토타입</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="saveBtn">저장</button>
+        <button id="resetBtn" class="danger">초기화</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel left-panel">
+        <h2>캐릭터</h2>
+        <div id="playerCard" class="card"></div>
+
+        <h3>스탯 분배</h3>
+        <div id="statPointsRow" class="muted"></div>
+        <div id="statList" class="stat-list"></div>
+
+        <h3>성향</h3>
+        <div id="alignmentCard" class="card compact"></div>
+      </section>
+
+      <section class="panel center-panel">
+        <div id="screenTitle" class="screen-title">타이틀</div>
+        <div id="mainScreen"></div>
+      </section>
+
+      <section class="panel right-panel">
+        <h2>로그</h2>
+        <div id="logBox" class="log-box"></div>
+
+        <h3>로드맵</h3>
+        <div class="card compact">
+          <p>현재 버전은 싱글플레이 프로토타입이지만, 구조상 MORPG/MMORPG 확장을 염두에 두고 설계됨.</p>
+          <ul>
+            <li>v0.1: 로컬 저장 RPG</li>
+            <li>v0.2: 로그인/랭킹 API 연결</li>
+            <li>v0.3: 채팅/로비</li>
+            <li>v0.5: 파티/협동 보스</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/gameData.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
