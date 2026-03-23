@@ -1,56 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DREAM ON - Text Web RPG</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>DREAM ON</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
-      <div>
-        <h1>DREAM ON</h1>
-        <p class="subtitle">몽환 고딕 다크 판타지 텍스트 웹 RPG</p>
-      </div>
-      <div class="top-actions">
-        <button id="saveBtn">저장</button>
-        <button id="loadBtn">불러오기</button>
-        <button id="resetBtn" class="danger">초기화</button>
-      </div>
-    </header>
 
-    <main class="layout">
-      <section class="panel status-panel">
-        <h2>상태</h2>
-        <div id="status"></div>
-        <h3>스탯 분배</h3>
-        <div id="statControls"></div>
-      </section>
+<h1>DREAM ON (Text RPG)</h1>
 
-      <section class="panel center-panel">
-        <h2 id="sceneTitle">시작</h2>
-        <div id="story" class="story"></div>
-        <div id="actions" class="actions"></div>
-      </section>
+<div id="game">
+  <div id="log"></div>
+  <div id="battle"></div>
+  <button onclick="startTestBattle()">전투 시작</button>
+</div>
 
-      <section class="panel side-panel">
-        <h2>진행</h2>
-        <div id="questBox"></div>
-        <h3>장비</h3>
-        <div id="equipmentBox"></div>
-        <h3>인벤토리</h3>
-        <div id="inventoryBox"></div>
-      </section>
-    </main>
-
-    <section class="panel log-panel">
-      <h2>로그</h2>
-      <div id="log"></div>
-    </section>
-  </div>
-
-  <script src="data/gameData.js"></script>
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
