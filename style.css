@@ -1,1 +1,73 @@
+:root {
+  --bg: #0d1020;
+  --panel: rgba(18, 24, 46, 0.92);
+  --panel-2: rgba(28, 34, 64, 0.92);
+  --line: rgba(141, 162, 255, 0.18);
+  --text: #eef2ff;
+  --muted: #aeb7de;
+  --accent: #9ac3ff;
+  --accent-2: #c79bff;
+  --danger: #ff7c9a;
+  --lucid: #94dcff;
+  --nightfall: #d080ff;
+  --gold: #f5d586;
+}
 
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(104, 120, 255, 0.16), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(177, 104, 255, 0.12), transparent 25%),
+    linear-gradient(180deg, #090c18, #0d1020 40%, #12152a);
+}
+.app { max-width: 1400px; margin: 0 auto; padding: 20px; }
+.topbar, .panel {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 20px; border-radius: 20px; margin-bottom: 18px;
+}
+h1 { margin: 0; font-size: 28px; letter-spacing: 0.08em; }
+.subtitle { margin: 6px 0 0; color: var(--muted); }
+.top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.layout { display: grid; grid-template-columns: 290px 1fr 300px; gap: 18px; }
+.panel { border-radius: 20px; padding: 18px; }
+.log-panel { margin-top: 18px; }
+h2, h3 { margin-top: 0; }
+.story {
+  min-height: 280px; white-space: pre-wrap; line-height: 1.7;
+  color: var(--text); padding: 14px; border-radius: 14px;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+}
+.actions { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+button {
+  border: 1px solid rgba(154, 195, 255, 0.22);
+  background: linear-gradient(180deg, rgba(138, 166, 255, 0.17), rgba(90, 110, 180, 0.18));
+  color: var(--text); padding: 10px 14px; border-radius: 12px; cursor: pointer;
+  transition: transform .08s ease, opacity .2s ease, border-color .2s ease;
+}
+button:hover { transform: translateY(-1px); border-color: rgba(190, 210, 255, 0.45); }
+button.danger { border-color: rgba(255, 124, 154, 0.3); background: rgba(255, 124, 154, 0.14); }
+button.small { padding: 6px 10px; font-size: 13px; }
+.card, .mini-list {
+  padding: 12px; border-radius: 14px; background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05); margin-bottom: 10px;
+}
+.stat-row, .resource-row, .equip-row, .item-row, .quest-row {
+  display: flex; justify-content: space-between; gap: 12px; margin: 6px 0;
+}
+.muted { color: var(--muted); }
+.gold { color: var(--gold); }
+.lucid { color: var(--lucid); }
+.nightfall { color: var(--nightfall); }
+#log { max-height: 220px; overflow: auto; line-height: 1.65; white-space: pre-wrap; }
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; }
+}
